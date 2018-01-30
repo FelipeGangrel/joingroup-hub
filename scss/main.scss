@@ -1,0 +1,69 @@
+$petroleo: #222f3e;
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+div#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $petroleo;;
+    height: 80vh;
+    div#center{
+        text-align: center;
+        img.main-logo{
+            width: 256px;
+            height: 256px;
+        }
+        div#slogan{
+            color: #999;
+            margin: 2em 0;
+            font-size: 3em;
+            font-weight: 300;
+        }
+    }
+}
+
+div#hub{
+    background-color: darken($petroleo, 2%);
+    align-self: flex-end;
+    display: flex;
+    min-height: 20vh;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid lighten($petroleo, 2%);
+    div{
+        margin: 0 2em;
+    }
+    img{
+        width: 128px;
+        height: 128px;
+    }
+}
+
+@media screen and (max-width: 640px){
+    div#main{
+        min-height: 100vh;
+        div#center{
+            div#slogan{
+                font-size: 2em;
+                margin: 1em 0;
+            }
+        }
+    }
+    div#hub{
+        min-height: 100vh;
+        flex-direction: column;
+        div{
+            margin: 2em 0;
+        }
+    }
+}
+
